@@ -1,0 +1,6 @@
+// 移除隐藏且显示... 
+@mixin ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

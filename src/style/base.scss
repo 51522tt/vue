@@ -1,0 +1,13 @@
+@import './viriables.scss'; 
+
+html {
+    font-size:100px;
+}
+// 1 rem = html 中 font-size 的大小
+
+body {
+    font-size: .12rem;
+    color:$content-fontcolor;
+}
+
+   
