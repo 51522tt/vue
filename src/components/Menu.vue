@@ -9,6 +9,21 @@
           <div class="iconfont" v-html='item.icon'/>
           <div class="docker__title">{{item.text}}</div>
     </div>
+      <n-card>
+      <template #header>
+        <n-skeleton text v-if="loading" width="60%" />
+        <template v-else>I'm OK</template>
+      </template>
+      <n-skeleton text v-if="loading" :repeat="6" />
+      <template v-else>
+        不要忘了留姓名<br />
+        电话和其他事情<br />
+        不要说的太快免得我没写下你大名<br />
+        或许你不再打来<br />
+        我却等到头发白<br />
+        希望有一天你会打来
+      </template>
+    </n-card>
   </div>
 </template>
 

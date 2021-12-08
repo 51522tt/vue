@@ -7,8 +7,11 @@
     <div class='login__input'>
         <input class='login__input__content' type="text" placeholder='请输入密码'>
     </div>
-    <div class='login-button' @click='handleLogin'>登录</div>
-    <div class='login-link' @click='handleToRegister'>立即注册</div>
+    <div class='login__input'>
+        <input class='login__input__content' type="text" placeholder='再输入一次密码'>
+    </div>
+    <div class='login-button' @click="handleRegister">立即注册</div>
+    <div class='login-link' @click="handleToLogin" >已有账号，前往登录</div>
     <!-- <div>忘记密码</div> -->
   </div>
 </template>
@@ -17,20 +20,19 @@
 import { useRouter } from 'vue-router'
 
 export default {
-  name: 'login',
+  name: 'register',
   setup () {
     const router = useRouter()
-    const handleLogin = () => {
-      localStorage.isLogin = true
-      console.log('Home')
+    const handleRegister = () => {
       router.push({ name: 'Home' })
     }
-    const handleToRegister = () => {
-      router.push({ name: 'Register' })
+    const handleToLogin = () => {
+      router.push({ name: 'Login' })
     }
+
     return {
-      handleLogin,
-      handleToRegister
+      handleRegister,
+      handleToLogin
     }
   }
 }
